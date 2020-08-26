@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#43a047" />
+    <meta name="theme-color" content="#43a047" />
+    <title>Capturar vídeo e áudio</title>
+</head>
+
+<style>
+    #app {
+        padding-top: 2em;
+        text-align: center; 
+    }
+
+</style>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper green">
+                <a href="#" class="brand-logo truncate center">Capturar vídeo e áudio</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" id= "app">
+        <div class="row">
+          <p><button class="waves-effect waves-light btn green" type="button" onclick="getStream('video')">Capturar a câmera</button></p>
+          
+          <video controls autoplay style="height:180px; width: 240px;"></video>
+        </div>
+        <div class="row">
+          <p><button class="waves-effect waves-light btn green" type="button" onclick="getStream('audio')">Capturar o microfone</button></p>
+          
+          <audio controls></audio>
+        </div>
+      </div>
+
+      <div class="row" id="app">
+        <div class="col s12">
+            <h5>Instalar a aplicação</h5>
+            <button class="waves-effect waves-light btn green" id="btn-instalar" hidden><i class="material-icons right">home</i>Instalar</button>
+        </div>
+      </div>
+
+      
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="js/materialize.min.js"></script>
+      <script src="js/quagga.min.js"></script>
+      <script src="js/main.js" async></script>
+      <script src="js/instalar.js"></script>
+    
+</body>
+</html>
